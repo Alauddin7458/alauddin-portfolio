@@ -14,7 +14,7 @@
     --transition: all .3s ease;
     --accent-teal: #2dd4bf;
     --accent-blue: #60a5fa;
-    --section-bg: #ffffff; /* Unified section background */
+    --page-bg: #f0f7ff; /* Single background color for the whole page */
 }
 
 [data-theme="dark"] {
@@ -26,10 +26,10 @@
     --border: #1e293b;
     --shadow: 0 15px 40px rgba(0,0,0,.35);
     --shadow-hover: 0 20px 50px rgba(0,0,0,.45);
-    --section-bg: #0b1220; /* Unified section background for dark mode */
+    --page-bg: #0b1220; /* Dark mode unified background */
 }
 
-[data-theme="dark"] body { background: var(--section-bg); }
+[data-theme="dark"] body { background: var(--page-bg); }
 [data-theme="dark"] .stat-card,
 [data-theme="dark"] .skill-card,
 [data-theme="dark"] .solution-card,
@@ -37,7 +37,8 @@
 [data-theme="dark"] .education-card,
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .contact-card,
-[data-theme="dark"] .timeline-content {
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .hero-profile-card {
     background: #0f172a;
 }
 [data-theme="dark"] .theme-toggle i::before { content: "\f185"; }
@@ -55,7 +56,7 @@ html {
 body {
     font-family: "Inter", sans-serif;
     color: var(--text);
-    background: var(--section-bg);
+    background: var(--page-bg);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -85,14 +86,14 @@ button {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255,255,255,.96);
+    background: rgba(240, 247, 255, .96);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid transparent;
     transition: var(--transition);
 }
 
 .header.scrolled {
-    background: rgba(255,255,255,.98);
+    background: rgba(240, 247, 255, .98);
     box-shadow: 0 5px 25px rgba(15,23,42,.08);
     border-color: var(--border);
 }
@@ -206,7 +207,7 @@ button {
 .hero {
     min-height: 100vh;
     padding: 150px 0 90px;
-    background: var(--section-bg);
+    background: var(--page-bg);
     display: flex;
     align-items: center;
     position: relative;
@@ -245,7 +246,7 @@ button {
 }
 
 .hero-intro {
-    color: #000000;
+    color: var(--primary);
     font-weight: 800;
     font-size: 13px;
     letter-spacing: 1.5px;
@@ -254,40 +255,37 @@ button {
 }
 
 .hero-intro .sep {
-    color: #000000;
+    color: var(--muted);
     margin: 0 8px;
 }
 
 .hero h1 {
     font-size: clamp(42px,6vw,66px);
     line-height: 1.1;
-    color: #000000;
+    color: var(--secondary);
     margin-bottom: 20px;
     font-weight: 800;
 }
 
 .hero h1 span {
     display: block;
-    background: none;
-    -webkit-background-clip: initial;
-    background-clip: initial;
-    color: #000000;
+    color: var(--primary);
 }
 
 .typing-text {
-    color: #000000;
+    color: var(--primary);
 }
 
 .hero h2 {
     font-size: clamp(22px,3vw,32px);
     line-height: 1.35;
-    color: #000000;
+    color: var(--secondary);
     margin-bottom: 22px;
 }
 
 .hero-description {
     max-width: 620px;
-    color: #000000;
+    color: var(--muted);
     font-size: 16px;
     margin-bottom: 32px;
 }
@@ -339,18 +337,18 @@ button {
     gap: 22px;
     margin-top: 26px;
     font-size: 13px;
-    color: #000000;
+    color: var(--muted);
 }
 
 .hero-meta span {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    color: #000000;
+    color: var(--text);
 }
 
 .hero-meta i {
-    color: #000000;
+    color: var(--primary);
 }
 
 .hero-social {
@@ -373,7 +371,7 @@ button {
 
 .hero-social a {
     background: white;
-    color: #000000;
+    color: var(--secondary);
 }
 
 .hero-social a:hover {
@@ -390,8 +388,7 @@ button {
     transform: translateY(-3px);
 }
 
-/* ---- Profile card (right side) ---- */
-
+/* ---- Profile Card ---- */
 .hero-profile-card {
     background: white;
     border: 1px solid var(--border);
@@ -424,13 +421,13 @@ button {
 }
 
 .hero-profile-top h3 {
-    color: #000000;
+    color: var(--secondary);
     font-size: 19px;
     margin-bottom: 3px;
 }
 
 .hero-profile-top p {
-    color: #000000;
+    color: var(--muted);
     font-size: 13px;
 }
 
@@ -439,7 +436,7 @@ button {
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: #000000;
+    color: var(--muted);
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--border);
@@ -471,7 +468,7 @@ button {
 
 .hero-profile-stats strong {
     display: block;
-    color: #000000;
+    color: var(--secondary);
     font-size: 22px;
     font-weight: 800;
     margin-bottom: 4px;
@@ -479,7 +476,7 @@ button {
 
 .hero-profile-stats span {
     display: block;
-    color: #000000;
+    color: var(--muted);
     font-size: 10.5px;
     line-height: 1.3;
 }
@@ -497,7 +494,7 @@ button {
     border-radius: 999px;
     font-size: 11px;
     font-weight: 600;
-    color: #000000;
+    color: var(--text);
 }
 
 .scroll-down {
@@ -513,19 +510,19 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 3px;
-    color: #000000;
+    color: var(--muted);
     font-size: 11px;
 }
 
-/* ---- Sections Unified Background ---- */
+/* ---- All Sections Unified Background ---- */
 .section {
     padding: 100px 0;
-    background: var(--section-bg);
+    background: var(--page-bg);
 }
 
 .section-light,
 .contact-section {
-    background: var(--section-bg);
+    background: var(--page-bg);
 }
 
 .section-heading {
@@ -1104,7 +1101,7 @@ button {
         left: 0;
         width: 100%;
         padding: 20px;
-        background: white;
+        background: var(--page-bg);
         border-top: 1px solid var(--border);
         box-shadow: var(--shadow);
         flex-direction: column;
