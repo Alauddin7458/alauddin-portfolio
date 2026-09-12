@@ -14,7 +14,7 @@
     --transition: all .3s ease;
     --accent-teal: #2dd4bf;
     --accent-blue: #60a5fa;
-    --page-bg: #f0f7ff; /* Single background color for the whole page */
+    --page-bg: #f0f7ff;
 }
 
 [data-theme="dark"] {
@@ -26,10 +26,13 @@
     --border: #1e293b;
     --shadow: 0 15px 40px rgba(0,0,0,.35);
     --shadow-hover: 0 20px 50px rgba(0,0,0,.45);
-    --page-bg: #0b1220; /* Dark mode unified background */
+    --page-bg: #0b1220;
 }
 
-[data-theme="dark"] body { background: var(--page-bg); }
+[data-theme="dark"] body {
+    background: var(--page-bg);
+}
+
 [data-theme="dark"] .stat-card,
 [data-theme="dark"] .skill-card,
 [data-theme="dark"] .solution-card,
@@ -41,7 +44,10 @@
 [data-theme="dark"] .hero-profile-card {
     background: #0f172a;
 }
-[data-theme="dark"] .theme-toggle i::before { content: "\f185"; }
+
+[data-theme="dark"] .theme-toggle i::before {
+    content: "\f185";
+}
 
 * {
     margin: 0;
@@ -80,6 +86,10 @@ button {
     margin: auto;
 }
 
+/* ==============================
+   HEADER
+   ============================== */
+
 .header {
     position: fixed;
     top: 0;
@@ -111,8 +121,9 @@ button {
     color: var(--secondary);
 }
 
+/* CHANGED: Md. Alauddin text is now black */
 .logo span {
-    color: var(--primary);
+    color: #0f172a;
 }
 
 .navbar {
@@ -203,7 +214,10 @@ button {
     cursor: pointer;
 }
 
-/* ---- Home / Hero Section ---- */
+/* ==============================
+   HOME / HERO SECTION
+   ============================== */
+
 .hero {
     min-height: 100vh;
     padding: 150px 0 90px;
@@ -267,9 +281,10 @@ button {
     font-weight: 800;
 }
 
+/* CHANGED: APEX Developer text is now black */
 .hero h1 span {
     display: block;
-    color: var(--primary);
+    color: #0f172a;
 }
 
 .typing-text {
@@ -388,7 +403,10 @@ button {
     transform: translateY(-3px);
 }
 
-/* ---- Profile Card ---- */
+/* ==============================
+   PROFILE CARD
+   ============================== */
+
 .hero-profile-card {
     background: white;
     border: 1px solid var(--border);
@@ -514,7 +532,10 @@ button {
     font-size: 11px;
 }
 
-/* ---- All Sections Unified Background ---- */
+/* ==============================
+   ALL SECTIONS
+   ============================== */
+
 .section {
     padding: 100px 0;
     background: var(--page-bg);
@@ -548,6 +569,10 @@ button {
 .section-heading p {
     color: var(--muted);
 }
+
+/* ==============================
+   ABOUT
+   ============================== */
 
 .about-grid {
     display: grid;
@@ -628,6 +653,10 @@ button {
     font-size: 12px;
 }
 
+/* ==============================
+   SKILLS / SOLUTIONS
+   ============================== */
+
 .skills-grid,
 .solutions-grid {
     display: grid;
@@ -689,6 +718,10 @@ button {
     font-size: 11px;
     color: var(--text);
 }
+
+/* ==============================
+   TIMELINE
+   ============================== */
 
 .timeline {
     position: relative;
@@ -772,6 +805,10 @@ button {
     padding-left: 5px;
 }
 
+/* ==============================
+   SOLUTION CARDS
+   ============================== */
+
 .solution-card {
     position: relative;
     padding: 30px;
@@ -803,6 +840,10 @@ button {
     color: var(--muted);
     font-size: 13px;
 }
+
+/* ==============================
+   CERTIFICATIONS
+   ============================== */
 
 .certification-grid {
     display: grid;
@@ -839,6 +880,10 @@ button {
     color: var(--muted);
     font-size: 12px;
 }
+
+/* ==============================
+   EDUCATION
+   ============================== */
 
 .education-grid {
     display: grid;
@@ -885,6 +930,10 @@ button {
     font-size: 11px;
 }
 
+/* ==============================
+   SERVICES
+   ============================== */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -912,6 +961,10 @@ button {
     color: var(--muted);
     font-size: 12px;
 }
+
+/* ==============================
+   CONTACT
+   ============================== */
 
 .contact-grid {
     display: grid;
@@ -971,6 +1024,10 @@ button {
     margin-bottom: 20px;
 }
 
+/* ==============================
+   FOOTER
+   ============================== */
+
 .footer {
     background: #020617;
     color: white;
@@ -1007,6 +1064,10 @@ button {
     border-top: 1px solid #1e293b;
 }
 
+/* ==============================
+   BACK TO TOP
+   ============================== */
+
 .back-to-top {
     position: fixed;
     right: 25px;
@@ -1038,6 +1099,10 @@ button {
     background: var(--primary-dark);
 }
 
+/* ==============================
+   REVEAL ANIMATION
+   ============================== */
+
 .reveal {
     opacity: 0;
     transform: translateY(25px);
@@ -1049,8 +1114,15 @@ button {
     transform: translateY(0);
 }
 
+/* ==============================
+   RESPONSIVE - 1000px
+   ============================== */
+
 @media (max-width: 1000px) {
-    .navbar { gap: 16px; }
+
+    .navbar {
+        gap: 16px;
+    }
 
     .hero-container,
     .about-grid {
@@ -1088,8 +1160,15 @@ button {
     }
 }
 
+/* ==============================
+   RESPONSIVE - 768px
+   ============================== */
+
 @media (max-width: 768px) {
-    .nav-container { height: 68px; }
+
+    .nav-container {
+        height: 68px;
+    }
 
     .menu-toggle {
         display: block;
@@ -1159,10 +1238,23 @@ button {
     }
 }
 
+/* ==============================
+   RESPONSIVE - 480px
+   ============================== */
+
 @media (max-width: 480px) {
-    .hero h1 { font-size: 40px; }
-    .hero h2 { font-size: 22px; }
-    .hero-description { font-size: 14px; }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
 
     .hero-profile-stats {
         grid-template-columns: 1fr;
@@ -1176,5 +1268,7 @@ button {
         width: 100%;
     }
 
-    .btn-cv span { display: none; }
+    .btn-cv span {
+        display: none;
+    }
 }
