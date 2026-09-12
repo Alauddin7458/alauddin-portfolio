@@ -1272,18 +1272,4 @@ button {
         display: none;
     }
 
-/* =========================================
-   FORCE BLACK TEXT FOR REQUESTED AREAS
-   ========================================= */
-
-.header .logo,
-.header .logo span {
-    color: #000000 !important;
-}
-
-.hero h1,
-.hero h1 span {
-    color: #000000 !important;
-}
-
 }
