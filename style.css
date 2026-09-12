@@ -1271,7 +1271,6 @@ button {
     .btn-cv span {
         display: none;
     }
-}
 
 /* =========================================
    FORCE BLACK TEXT FOR REQUESTED AREAS
@@ -1285,4 +1284,6 @@ button {
 .hero h1,
 .hero h1 span {
     color: #000000 !important;
+}
+
 }
